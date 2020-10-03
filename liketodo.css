@@ -1,0 +1,257 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+  }
+body {
+	margin: 0px;
+}
+.embed-responsive embed-responsive-16by9
+{
+	width: auto;
+	height: auto;
+}
+header{
+	width: auto;
+	height: 30px;
+	border-bottom: 1px #A5A5A5 solid;
+	
+}
+.container {
+	background-color: #FFFFFF;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom-width: 0px;
+	padding: 0px;
+}
+
+.content{
+	width: 90%;
+	height: 500px;
+	padding: 5%;
+	margin: 0;
+	display: block;
+}
+.categorybutton{
+	line-height: 30px;
+	color: #000000;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px;
+	border-radius: 30px;
+	background-color: #c8e0fa;
+	border:2px blue none;
+}
+.todourgent{
+	line-height: 30px;
+	color: #fc4444;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px;
+	border-radius: 30px;
+	background-color: transparent;
+	border:2px solid #fc4444 ;
+}
+.todoimportant{
+	line-height: 30px;
+	color: rgb(33, 184, 73);
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px;
+	border-radius: 30px;
+	background-color: transparent;
+	border:2px solid rgb(33, 184, 73);
+
+}
+.addtodo{
+	width: 100%;
+}
+.todo{
+	margin-top: 20px;
+	margin-left: 36px;
+}
+.list{
+	width: 120%;
+}
+ul {
+	
+	margin: -18px;
+	padding-top: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+	cursor: pointer;
+	width: 55%;
+	height: 25px;
+	margin: 0;
+	position: relative;
+	padding: 0px 4px 4px 4px;
+	font-size: 16px;
+	transition: 0.2s;
+	list-style:none;
+	
+	
+	/* make the list items unselectable */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+	background: #f9f9f9;
+  }
+
+
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+	background: #888;
+	color: #fff;
+	text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+	content: '';
+	position: absolute;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 16px;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 7px;
+  }
+  /* Style the close button */
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10 10 10 10 ;
+  }
+  
+  .close:hover {
+	
+	color: white;
+  }  
+.btn-danger :hover{
+	background-color: red;
+	color: white;
+}
+.btn-important :hover{
+	background-color: green;
+	color: white;
+}
+.addtodo{
+	margin-top: 20px;
+}
+.btnaddtodo{
+	line-height: 30px;
+	color: #000000;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0px;
+	border-radius: 30px;
+	background-color: #c8e0fa;
+	border:2px blue none;
+}
+.date{
+	margin-top: 15px;
+}
+
+
+.remind-wrap .remindtoggle{
+	font-size: 20px;
+	color: #000000;
+	border:  none;
+	background-color: transparent;
+	padding: 0 0 0 0;
+}
+.remind-wrap .remind-open .remindtoggle:after{
+	content:"close"
+}
+.remind-wrap .remind-close .remindtoggle:after{
+	content:"open"
+}
+.remind{
+	border: 0px solid none;
+	display: block;
+	width: 100%;
+	text-align: left;
+	background-color: #afd6ff;
+	transition: height 0.35s ease;
+	overflow: hidden;
+	padding: 0 0 0 10px;
+	margin-top: 20px;
+}
+.remind-close .remind{
+	height: 0px;
+}
+.remind-open .remind{
+	height: 400px;
+}
+
+
+/* label {
+	width: 100%;
+	display:block;
+}
+.toggle{
+	width: 50%;
+	display: none;
+}
+label:hover{
+	cursor: pointer;	
+}
+input[type=checkbox]:checked + div {
+	opacity:1;
+	max-height:0;
+}
+.toggle-box {
+	display: inline-block;
+	padding: 1px;
+	opacity:0;
+	overflow:hidden;
+	transition:opacity 1.0s linear;
+} 
+
+.block {
+	height: 50px;
+	width: 100%;
+	margin-left: 5%;
+}
+.black{
+    width: 100%;
+    height: auto;
+}
+.btnadd{
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	background-color: #007bff;
+	border-radius: 15px;
+	cursor: pointer;
+	margin-left: 3%;
+	margin-right: 3%;
+	padding-left: 30px;
+	padding-right: 3%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}*/
+
+
+@media only screen and (max-width: 320px) {
+
+}
+@media (min-width: 321px) and (max-width: 768px) {
+
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+
+}
+@media (min-width: 1001px) {
+}

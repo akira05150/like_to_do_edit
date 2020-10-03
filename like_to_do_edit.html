@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">   
+<meta name="google-site-verification" content="lV1AKFBcaZE80pIDMwXMUmgWFY8oTfKBTfjfhHz7E8U" />
+<title>like to-do list</title>
+<link href="css/liketodo.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="js/maintodo.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <header></header>
+
+  <div class="content">
+      <div class="category">
+          <h5 style="font-size: 20px;;margin-top: 20px;">類別：</h5>
+          <p></p>
+          <input type="button" class="categorybutton" id="btncate1" onclick="Change1()" value="生活">
+          <input type="button" class="categorybutton" id="btncate2" onclick="Change2()" value="課業">
+          <input type="button" class="categorybutton" id="btncate3" onclick="Change3()" value="社團">
+          <input type="button" class="categorybutton" id="btncate4" onclick="Change4()" value="+">    
+      </div>
+        <script>
+          function Change1(){
+            btncate1.style.backgroundColor = "rgb(117, 179, 240)";
+            btncate2.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate3.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate4.style.backgroundColor = "rgb(209, 230, 250)";
+
+          }
+          function Change2(){
+            btncate1.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate2.style.backgroundColor = "rgb(117, 179, 240)	";
+            btncate3.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate4.style.backgroundColor = "rgb(209, 230, 250)";
+          }
+          function Change3(){
+            btncate1.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate2.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate3.style.backgroundColor = "rgb(117, 179, 240)	";
+            btncate4.style.backgroundColor = "rgb(209, 230, 250)";
+          }
+          function Change4(){
+            btncate1.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate2.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate3.style.backgroundColor = "rgb(209, 230, 250)";
+            btncate4.style.backgroundColor = "rgb(117, 179, 240)	";
+          }
+        </script>
+<!--
+      <div class="addtodo" style="width: 120%;">
+        <input type="text" id="myInput" value="買牙刷" style="width: 55%;"> 
+        <input type="button" class="todourgent" id="btnurgent" value="緊急" onclick="Change5()">
+        <input type="button" class="todoimportant" id="btnimportant" value="重要" onclick="Change6()">
+        <script>
+          var check1 = 1;
+          var check2 = 1;
+          function Change5(){   //urgent
+            if( check1 == 1){
+              btnurgent.style.backgroundColor = "rgb(255, 255, 255)";
+              btnurgent.style.color = "rgb(252, 68, 68)";
+              check1 = 0;
+            }else if( check1 == 0 ){
+              btnurgent.style.backgroundColor = "rgb(252, 68, 68)";
+              btnurgent.style.color = "rgb(255, 255, 255)";
+              check1 = 1;
+            }
+          }
+          function Change6(){    //important
+            if( check2 == 1){ 
+              btnimportant.style.backgroundColor = "rgb(33, 184, 73)";
+              btnimportant.style.color = "rgb(255, 255, 255)";
+              check2 = 0;
+            }else if( check2 == 0 ){
+              btnimportant.style.backgroundColor = "rgb(255, 255, 255)";
+              btnimportant.style.color = "rgb(33, 184, 73)";
+              check2 = 1;
+            }
+          }
+        </script>
+-->
+
+<div class="list">
+  <ul id="myUL">
+    <hr>
+    <li>
+      
+      <input type="text" id="myInput" value="買牙刷" style="width: 55%;text-decoration:line-through; color:gray;">
+      <input type="button" class="todourgent" id="btnurgent2" value="緊急" style="background-color: rgb(252, 68, 68);color:white;" onclick="Change_u2()">
+      <input type="button" class="todoimportant" id="btnimportant2" value="重要" style="background-color:rgb(33, 184, 73);color:white;" onclick="Change_i2()">
+    </li>
+    <hr>
+    <li>
+      
+      <input type="text" id="myInput" value="倒垃圾" style="width: 55%;">
+      <input type="button" class="todourgent" id="btnurgent3" value="緊急" class="todourgent" id="btnurgent2" value="緊急" style="background-color: rgb(252, 68, 68);color:white;" onclick="Change_u3()">
+      <input type="button" class="todoimportant" id="btnimportant3" value="重要" onclick="Change_i3()">
+    </li>
+    <hr>
+    <li>
+      
+      <input type="text" id="myInput" value="澆花" style="width: 55%;">
+      <input type="button" class="todourgent" id="btnurgent4" value="緊急" onclick="Change_u4()">
+      <input type="button" class="todoimportant" id="btnimportant4" value="重要" onclick="Change_i4()">
+    </li>
+    
+  </ul>
+
+  <script>
+    //1:亮
+    var check_toothbrush_u = 1;
+    var check_toothbrush_i = 1;
+
+    var check_trash_u = 1;
+    var check_trash_i = 0;
+
+    var check_flower_u = 0;
+    var check_flower_i = 0;
+
+    function Change_u2() {   //urgent
+      if (check_toothbrush_u == 1) {
+        btnurgent2.style.backgroundColor = "rgb(255, 255, 255)";
+        btnurgent2.style.color = "rgb(252, 68, 68)";
+        check_toothbrush_u = 0;
+      } else if (check_toothbrush_u == 0) {
+        btnurgent2.style.backgroundColor = "rgb(252, 68, 68)";
+        btnurgent2.style.color = "rgb(255, 255, 255)";
+        check_toothbrush_u = 1;
+      }
+    }
+    function Change_i2() {    //important
+      if (check_toothbrush_i == 1) {
+        btnimportant2.style.backgroundColor = "rgb(255, 255, 255)";
+        btnimportant2.style.color = "rgb(33, 184, 73)";
+        check_toothbrush_i = 0;
+      } else if (check_toothbrush_i == 0) {
+        btnimportant2.style.backgroundColor = "rgb(33, 184, 73)";
+        btnimportant2.style.color = "rgb(255, 255, 255)";
+        check_toothbrush_i = 1;
+      }
+    }
+
+    function Change_u3() {   //urgent
+        if (check_trash_u == 1) {
+          btnurgent3.style.backgroundColor = "rgb(255, 255, 255)";
+          btnurgent3.style.color = "rgb(252, 68, 68)";
+          check_trash_u = 0;
+        } else if (check_trash_u == 0) {
+          btnurgent3.style.backgroundColor = "rgb(252, 68, 68)";
+          btnurgent3.style.color = "rgb(255, 255, 255)";
+          check_trash_u = 1;
+        }
+      }
+      function Change_i3() {    //important
+        if (check_trash_i == 1) {
+          btnimportant3.style.backgroundColor = "rgb(255, 255, 255)";
+          btnimportant3.style.color = "rgb(33, 184, 73)";
+          check_trash_i = 0;
+        } else if (check_trash_i == 0) {
+          btnimportant3.style.backgroundColor = "rgb(33, 184, 73)";
+          btnimportant3.style.color = "rgb(255, 255, 255)";
+          check_trash_i = 1;
+        }
+      }
+
+      function Change_u4() {   //urgent
+          if (check_flower_u == 1) {
+            btnurgent4.style.backgroundColor = "rgb(255, 255, 255)";
+            btnurgent4.style.color = "rgb(252, 68, 68)";
+            check_flower_u = 0;
+          } else if (check_flower_u == 0) {
+            btnurgent4.style.backgroundColor = "rgb(252, 68, 68)";
+            btnurgent4.style.color = "rgb(255, 255, 255)";
+            check_flower_u = 1;
+          }
+        }
+        function Change_i4() {    //important
+          if (check_flower_i == 1) {
+            btnimportant4.style.backgroundColor = "rgb(255, 255, 255)";
+            btnimportant4.style.color = "rgb(33, 184, 73)";
+            check_flower_i = 0;
+          } else if (check_flower_i == 0) {
+            btnimportant4.style.backgroundColor = "rgb(33, 184, 73)";
+            btnimportant4.style.color = "rgb(255, 255, 255)";
+            check_flower_i = 1;
+          }
+        }
+  </script>
+</div>
+
+      </div>
+        <script>
+         // Create a "close" button and append it to each list item
+          var myNodelist = document.getElementsByTagName("li");
+          var i;
+          for (i = 0; i < myNodelist.length; i++) {
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            myNodelist[i].appendChild(span);
+          }
+
+          // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+
+          </script>
+
+      <div class="date">
+        <h5 style="font-size: 20px; float: left;margin-top: 20px;">期限：</h5>
+        <div class="row" style=" width: 70%;  margin: 0;">
+	        <div class='col-sm-6'>
+	        	<form>
+		            <div class="form-group">
+		                <div class='input-group date' id='datepicker'>
+		                    <input type='text' class="form-control" />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		            </div>
+		        </form>
+	        </div>
+	      </div>
+      </div>
+      
+      <div class="remind-wrap remind-close">
+        <p></p>
+        <h5 style="font-size: 20px; float: left;margin-top: 20px;">提醒：</h5>
+        <div class="md-form md-outline" style="width: 60%; margin: 0; padding: 0px;float: left;">
+          <input type="time" id="default-picker" class="form-control" placeholder="Select time" style="margin-top: 10px; margin-left: 10px;">
+        </div>
+</div>
+  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+	<script >
+	    $(function () {
+	        $('#datepicker').datepicker({
+	            format: "dd/mm/yyyy",
+	            autoclose: true,
+	            todayHighlight: true,
+		        showOtherMonths: true,
+		        selectOtherMonths: true,
+		        autoclose: true,
+		        changeMonth: true,
+		        changeYear: true,
+		        orientation: "button"
+	        });
+	    });
+	</script>
+
+<script>
+  var remindtoggleNode = document.querySelector('.remindtoggle');
+  remindtoggleNode.addEventListener("click", toggleFunc);
+  function toggleFunc(E){
+    var newClassName = "remind-wrap remind-close"
+    E.preventDefault();
+    remind = document.querySelector('.remind-wrap');
+    if(remind.className.match(/remind-close/)){
+      newClassName = "remind-wrap remind-open";
+    }
+    remind.className = newClassName;
+  }
+</script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+</body>
+</html>
